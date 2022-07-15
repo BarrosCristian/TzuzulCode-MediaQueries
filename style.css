@@ -60,7 +60,7 @@ input {
     border:1px solid var(--accent-text-clr);
     border-radius:5px;
     background-color:var(--btn-clr);
-  }
+}
   
 input:focus {
     color:var(--line-enchanced-glow-clr);
@@ -69,8 +69,10 @@ input:focus {
     box-shadow:-3px -3px 15px var(--line-enchanced-glow-clr);
     transition:.1s;
     animation:rotate-hue linear 2s infinite;
-  }
+}
   
+
+
 @keyframes rotate-hue{
     to{
         filter:hue-rotate(1turn);
@@ -198,7 +200,7 @@ input:focus {
 section{
     display:grid;
     grid-auto-rows:350px;
-    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(17rem, 1fr));
     gap:50px;
     margin:0 6rem;
 }
@@ -248,46 +250,114 @@ figcaption a:hover{
 }
 
 
+/*------media queries------*/
 
+@media only screen and (max-width: 785px) {
+    .icono span,
+    .icono h1{
+        position:relative;
+        font-size:4vw;
+    }
+    header{
+        min-width: 1rem;
+        max-width: 785px;
+    }
+    .canales{
+        min-width: 1rem;
+        max-width: 785px;
+    }
+    .canales img{
+        min-width: 10px;
+        max-width: 25px;
+        min-height:10px;
+        max-height:25px
+    }
+    section{
+        gap:5vw;
+        margin:0;
+        padding:0.5vw;
+        grid-auto-rows:minmax(10px, 320px);
+        grid-template-columns: repeat(auto-fill, minmax(20px, 100vw));
+    }
+    figure{
+        width:100vw;
+        min-height:20px;
+        max-height:320px;
+    }
+    figure video,
+    figure img,
+    figure iframe{
+        width:100vw;
+        min-height:20px;
+        max-height:320px;
+    }
 
+    #logo{
+        padding:0;
+        margin:0;
+    }
+    #videocam,
+    #notifications,
+    #face{
+        display:none;
+    }
+    input{
+        width:50vw;
+        font-size:4vw;
+        height:(minmax(2px, 40px))
+    }
+    .menu{
+        max-width:320px
+    }
+}
 
+@media only screen and (min-width:788) and (max-width: 1023px){
+    .icono span,
+    .icono h1{
+        position:relative;
+        font-size:3.5vw;
+    }
+    header{
+        max-width: 1023px;
+    }
+    .canales{
+        max-width: 1023px;
+    }
+    .canales img{
+        min-width: 10px;
+        max-width: 25px;
+        min-height:10px;
+        max-height:25px
+    }
+    section{
+        gap:1rem;
+        margin:1vw;
+        padding:1vw;
 
+        grid-auto-rows:minmax(10px, 340px);
+        grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+        justify-content: center;
+    }
+    figure{
+        width:320px; 
+    }
+    figure video,
+    figure img,
+    figure iframe{
+        width:320px;
+    }
 
-
-
-
-
-
-/* button{
-    position:relative;
-
-    outline:none;
-
-    width:10rem;
-    height:5rem;
-    padding:1rem auto;
-    border:.25rem solid var(--glow-clr);
-    box-shadow:0 0 .5rem .005rem var(--glow-clr), 0 0 3rem .5rem var(--glow-spread-clr), inset 0 0 .75rem .25rem var(--glow-clr);
+    #logo{
+        padding:0;
+        margin:0;
+    }
     
-    text-shadow:0 0 .5rem var(--glow-clr);
-    font-size:24px;
-    font-weight:bold;
-
-    background-color:var(--btn-clr);
-    border-radius:1rem;
-    color:var(--glow-clr);
-
-    transition: all 0,3;
+    input{
+        width:30vw;
+        font-size:4vw;
+        height:(minmax(2px, 40px))
+    }
+    .menu{
+        width:40vw;
+    }
 }
-
-button:hover{
-    box-shadow:0 0 .5rem .005rem var(--glow-clr), 0 0 4rem 1rem var(--glow-spread-clr), inset 0 0 .75rem .25rem var(--glow-clr);
-
-    color:var(--btn-clr);
-    background-color:var(--glow-clr);
-
-}
-
-button:active{
-    box-shadow:0 0 0.2rem .005rem var(--glow-clr), 0 0 4.5rem 1rem var(--glow-spread-clr), inset 0 0 .3rem .15rem var(--glow-clr);
-} */
