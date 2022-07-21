@@ -213,11 +213,6 @@ figure{
     transition:.2s;
 }
 
-figure:hover{
-    transform:scale(1.5);
-    background-color:var(--accent-clr);
-}
-
 figure video,
 figure img{
     height:200px;
@@ -284,6 +279,7 @@ figcaption a:hover{
         min-height:20px;
         max-height:320px;
     }
+    
     figure video,
     figure img,
     figure iframe{
@@ -311,7 +307,7 @@ figcaption a:hover{
     }
 }
 
-@media only screen and (min-width:788) and (max-width: 1023px){
+@media only screen and (min-width:788px) and (max-width: 1023px){
     .icono span,
     .icono h1{
         position:relative;
@@ -341,6 +337,9 @@ figcaption a:hover{
     figure{
         width:320px; 
     }
+    figure:hover{
+        transform:scale(1);
+    }
     figure video,
     figure img,
     figure iframe{
@@ -359,5 +358,11 @@ figcaption a:hover{
     }
     .menu{
         width:40vw;
+    }
+}
+@media only screen and (min-width:1024px){
+    figure:hover{
+        transform:scale(1.5);
+        background-color:var(--accent-clr);
     }
 }
